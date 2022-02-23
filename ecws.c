@@ -1,4 +1,3 @@
-#define  _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -58,7 +57,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the first line of length %zd\n", nread);
+    printf("Retrieved the first line of length %d\n", (int)nread);
 
     // get integer k, the num_stock_types
     // maybe should switch from atoi to strtol later
@@ -88,7 +87,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the second line of length %zd\n", nread);
+    printf("Retrieved the second line of length %d\n", (int)nread);
 
     // get integer m, the num_shelf_types
     // maybe should switch from atoi to strtol later
@@ -127,7 +126,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the third line of length %zd\n", nread);
+    printf("Retrieved the third line of length %d\n", (int)nread);
 
     // we need to capture all k stock lengths
     numptr = line;
@@ -165,7 +164,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the fourth line of length %zd\n", nread);
+    printf("Retrieved the fourth line of length %d\n", (int)nread);
 
     // we need to capture all k stock costs
     numptr = line;
@@ -203,7 +202,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the fifth line of length %zd\n", nread);
+    printf("Retrieved the fifth line of length %d\n", (int)nread);
 
     // we need to capture all m shelf lengths
     numptr = line;
@@ -241,7 +240,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     }
 
     // debugging output
-    printf("Retrieved the sixth line of length %zd\n", nread);
+    printf("Retrieved the sixth line of length %d\n", nread);
 
     // we need to capture all m shelf quantities
     numptr = line;

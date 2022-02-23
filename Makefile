@@ -9,7 +9,7 @@
 CC = gcc
 EXE = ecws
 OBJS = ecws.o
-CFLAGS = -Wall -Wextra -O0 -std=c99
+CFLAGS = -Wall -Wextra -O0 -std=gnu11
 
 .PHONY: clean
 
