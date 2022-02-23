@@ -30,6 +30,10 @@ typedef struct {
  *
  * stores the problemspec instance in prob_instance
  *
+ * the stock_lengths, stock_costs, shelf_lengths, and shelf_quantities members
+ * are dynamically allocated in this function and it's the responsiblity of the
+ * caller to free
+ *
  * Returns 0 if successful, or -1 if failed
  */
 int parse_input(FILE * in_file, problemspec_t * prob_instance) {
@@ -92,7 +96,7 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
     // get integer m, the num_shelf_types
     // maybe should switch from atoi to strtol later
     m = atoi(line);
-    if (k == 0) {
+    if (m == 0) {
         // atoi failed to convert the string to an integer
         // free the buffer allocated by getline
         free(line);
@@ -267,6 +271,9 @@ int parse_input(FILE * in_file, problemspec_t * prob_instance) {
 
     // ========================================================================
 
+
+    // free the buffer allocated by getline
+    free(line);
 
     // we parsed the input successfully
     return 0;
